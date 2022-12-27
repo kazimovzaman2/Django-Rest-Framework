@@ -1,8 +1,0 @@
-name: rest
-dependencies:
-  - python
-  - django==4.1.0
-  - djangorestframework
-  - pyyaml
-  - requests
-  - django-cors-headers
