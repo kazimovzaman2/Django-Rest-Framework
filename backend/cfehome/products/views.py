@@ -4,7 +4,7 @@ from .models import Product
 from .serializers import ProductSerializer
 
 
-class ProductCreateAPIView(generics.CreateAPIView):
+class ProductListCreateAPIView(generics.ListCreateAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
 
@@ -17,11 +17,20 @@ class ProductCreateAPIView(generics.CreateAPIView):
             content = title
         serializer.save(content=content)
 
-product_create_view = ProductCreateAPIView.as_view()
+product_list_create_view = ProductListCreateAPIView.as_view()
 
 class ProductDetailAPIView(generics.RetrieveAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
 
-
 product_detail_view = ProductDetailAPIView.as_view()
+
+
+class ProductListAPIView(generics.ListAPIView):
+    """
+    Bunu istifade etmiyeciyik
+    """
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializer
+
+product_list_view = ProductListAPIView.as_view()
