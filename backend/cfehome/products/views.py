@@ -23,6 +23,9 @@ class ProductListCreateAPIView(generics.ListCreateAPIView):
         if content is None:
             content = title
         serializer.save(content=content)
+    
+    # def perform_create(self, serializer):
+    #     return super().perform_create(serializer)
 
 product_list_create_view = ProductListCreateAPIView.as_view()
 
@@ -31,6 +34,9 @@ product_list_create_view = ProductListCreateAPIView.as_view()
 class ProductDetailAPIView(generics.RetrieveAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
+
+    def retrieve(self, request, *args, **kwargs):
+        return super().retrieve(request, *args, **kwargs)
 
 product_detail_view = ProductDetailAPIView.as_view()
 
