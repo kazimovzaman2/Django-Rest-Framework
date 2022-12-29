@@ -11,13 +11,13 @@ from .serializers import ProductSerializer
 
 
 
-
-"""       Generic view      """
+"""       Generic view       """
 
 # List and Create View page
 class ProductListCreateAPIView(
     StaffEditorPermissionMixin,
     generics.ListCreateAPIView):
+
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
 
@@ -90,6 +90,32 @@ product_destroy_view = ProductDestroyAPIView.as_view()
 #     serializer_class = ProductSerializer
 
 # product_list_view = ProductListAPIView.as_view()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
