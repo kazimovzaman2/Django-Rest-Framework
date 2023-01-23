@@ -10,7 +10,7 @@ I'm learning how to build REST APIs with Django & the Django Rest Framework 🤓
 3. Follow the instructions in the project's README file to run the project on your local machine.
 
 ## Youtube
-- Click [here](https://www.youtube.com/watch?v=c708Nf0cHrs&t=21818s) for find youtube video that i used.
+- Click [here](https://youtu.be/c708Nf0cHrs) for find youtube video that i used.
 
 ## 🚀 Tips
 - Make sure to check the [Django Rest Framework documentation](https://www.django-rest-framework.org/) for more information on how to use the framework.
